@@ -16,15 +16,7 @@ driver.implicitly_wait(10)
 driver.find_element(By.XPATH,"//input[@placeholder='Username']").send_keys("Admin")
 driver.find_element(By.XPATH,"//input[@placeholder='Password']").send_keys("admin123")
 driver.find_element(By.XPATH,"//button[@type='submit']").click()
-#Searching Admin page
-driver.find_element(By.XPATH,"//input[@placeholder='Search']").send_keys("Admin")
-driver.find_element(By.XPATH,"//a[@class='oxd-main-menu-item']").click()
-#Adding user
-driver.find_element(By.XPATH,"//button[normalize-space()='Add']").click()
-drop_down = driver.find_element(By.CLASS_NAME,"oxd-select-text")
-drop_down.click()
-#option = driver.find_element()
-time.sleep(4)
+#Confirm URL Home page
 current_url = driver.current_url
-
+time.sleep(4)
 print(current_url)
